@@ -1,0 +1,14 @@
+<div>
+  <h2>The Books are: </h2>
+  <ul>
+    {{#each booksFromDB}}
+    <li>
+      <a href="/books/{{this._id}} "> {{ this.title }} {{ this.description }}</a>
+      <a href="/books/{{this.}}"
+      <form action-"/books/{{ this._id }}/delete" method="POST">
+        <button>Delete</button>
+      </form>
+    </li>
+    {{/each}}
+  </ul>
+</div>

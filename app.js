@@ -64,6 +64,7 @@ app.use('/', index);
 
 // const authorRoutes = require("./routes/author-routes");
 // app.use("/", authorRoutes);
+
 // SHORTER VERSION 
 app.use("/", require("./routes/author-routes"));
 

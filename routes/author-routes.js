@@ -13,7 +13,7 @@ router.get("/authors/new", (req, res, next) => {
 });
 
 // POST routes to create a new author in the DB
-{/* <form action="/authors/create" method="POST"></form> */}
+/* <form action="/authors/create" method="POST"></form> */
 router.post("/authors/create", (req, res, next) => {
   console.log("THE FORM ", req.body);
   Author

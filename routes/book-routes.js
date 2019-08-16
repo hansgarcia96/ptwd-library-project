@@ -31,12 +31,12 @@ router.get("/books", (req, res, next) => {
 
 
 // POST Route to delete the book
-router.post("/books/:theId/delete", (req, res, next => {
+router.post("/books/:theId/delete", (req, res, next) => {
   Book
     .findByIdAndDelete(req, param.theId)
     .then()
     .catch()
-}));
+});
 
 // GET route to display the form for updating 
 router.get("/books/:theId/edit", (req, res, next) =>{
@@ -54,7 +54,7 @@ router.get("/books/:theId/edit", (req, res, next) =>{
         })
         .catch(err => console.log("Error while getting all the authors: ", err));
     })
-    .catch(err => console.log("Error while gettinf the book from the DB: ", err));
+    .catch(err => console.log("Error while getting the book from the DB: ", err));
 })
 
 // POST Route to save the update
@@ -75,7 +75,6 @@ router.get("/books/:bookId", (req, res, next) => {
       // console.log("Details page: ", theBook)
       // Author.findById(theBook.author)
       res.render("book-views/bookDetails", { theBook });
-
     })
     .catch(err => console.log("Error while getting the details of the book: ", err));
 });
